@@ -1,3 +1,5 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
   
 /* -------------------------------------------------------- */
@@ -7,7 +9,7 @@
 /* Variables are used like this: var(--text-color) */
 :root {
   /* Background Colors: */
-  --background-color: #0c2d45;
+  --background-color: #17223d;
   --content-background-color: #3e5ba3;
   --sidebar-background-color: #3e5ba3;
 
@@ -18,16 +20,16 @@
   --link-color-hover: #84d175;
 
   /* Text: */
-  --font: Courier New, monospace;
-  --heading-font: Courier New, monospace;
+  --font: 'JetBrains Mono', sans-serif;
+  --heading-font: 'JetBrains Mono', sans-serif;
   --font-size: 16px;
 
   /* Other Settings: */
   --margin: 10px;
   --padding: 15px;
-  --border: none;
+  --border: 12px solid #2d4175;
   --round-borders: 0px;
-  --sidebar-width: 160px;
+  --sidebar-width: 240px;
 }
 
 /* -------------------------------------------------------- */
