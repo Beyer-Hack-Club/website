@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Page has finished loading. Now, do things.
+  // Page has finished loading.
   loadLayoutByPetraPixel();
 
-  // Add any custom JavaScript code here...
 });
 
 function loadLayoutByPetraPixel() {
@@ -16,9 +15,6 @@ function loadLayoutByPetraPixel() {
 const nesting = getNesting();
 
 function headerHTML() {
-  // ${nesting} outputs "./" or "../" depending on current page depth.
-  // You can use it to refer to images etc.
-  // Example: <img src="${nesting}img/logo.png"> might output <img src="../img/logo.png">
 
   return `
   
@@ -87,9 +83,6 @@ function headerHTML() {
 }
 
 function footerHTML() {
-  // ${nesting} outputs "./" or "../" depending on current page depth.
-  // You can use it to refer to images etc.
-  // Example: <img src="${nesting}img/logo.png"> might output <img src="../img/logo.png">
 
   return `
 
@@ -103,7 +96,6 @@ function footerHTML() {
       </footer>`;
 }
 
-/* Do not edit anything below this line unless you know what you're doing. */
 
 function giveActiveClassToCurrentPage() {
   const els = document.querySelectorAll("nav a");
