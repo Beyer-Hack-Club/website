@@ -28,7 +28,7 @@ function headerHTML() {
 
       <header>
 <div class="header-image">
-          <img src="https://s3.beyerhack.club/logos/vector/banner.svg" alt="" />
+          <img src="https://s3.beyerhack.club/logos/raster/banner.png" alt="" />
         </div>
         <div class="header-content">
 	        <div class="header-title">Website Title</div>
