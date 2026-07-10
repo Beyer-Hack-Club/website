@@ -1,8 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Page has finished loading.
   loadLayoutByPetraPixel();
+  async function fetchLatestAnnouncement()
+  {
+    fetch('https://api.beyerhack.club/website/announcement')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        document.getElementById("announcement").innerHTML = JSON.parse(JSON.stringify(data)).Announcement;
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+  }
+  fetchLatestAnnouncement();
+    async function fetchLatestMeeting()
+  {
+    fetch('https://api.beyerhack.club/website/meeting')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        document.getElementById("meeting").innerHTML = JSON.parse(JSON.stringify(data)).Meeting;
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+  }
+  fetchLatestMeeting();
+})
 
-});
 
 function loadLayoutByPetraPixel() {
   const mainEl = document.querySelector("main");
@@ -60,13 +94,13 @@ function headerHTML() {
         
         <div class="sidebar-section">
           <div class="sidebar-title">Latest Announcement</div>
-          <p>There are no current announcements.</p>
+          <p id="announcement">There are no new announcements!</p>
         </div>
         
         <div class="sidebar-section">
           <div class="sidebar-title">Next Meeting</div>
           <blockquote>
-            <p>Date to be determined.</p>
+            <p id="meeting">The latest meeting date isn't set!</p>
           </blockquote>
         </div>
         
@@ -76,6 +110,7 @@ function headerHTML() {
             <li>Coding</li>
             <li>Game Development</li>
             <li>3D Modeling</li>
+            <li>Hardware</li>
           </ul>
         </div>
       </aside>
