@@ -75,7 +75,7 @@ function headerHTML() {
 	                <ul>
 	                  <li><a href="/coming-soon">Instagram</a></li>
 	                  <li><a href="/coming-soon">Facebook</a></li>
-                    <li><a href="https://discord.beyerhack.club>Discord</a></li>
+                    <li><a href="https://discord.beyerhack.club">Discord</a></li>
 	                </ul>
 	            </li>
 	          </ul>
