@@ -68,12 +68,14 @@ function headerHTML() {
 	          <ul>
 	            <li><a href="/">Home</a></li>
 	            <li><a href="/coming-soon">Meeting Logs</a></li>
-	            <li><a href="https://hcb.hackclub.com/donations/start/beyer-hack-club">Donate</a></li>
+	            <li><a href="https://discord.beyerhack.club">Discord</a></li>
+              <li><a href="https://donate.beyerhack.club">Donate</a></li>
 	            <li>
 	                <strong>Socials (hover to show)</strong>
 	                <ul>
 	                  <li><a href="/coming-soon">Instagram</a></li>
 	                  <li><a href="/coming-soon">Facebook</a></li>
+                    <li><a href="https://discord.beyerhack.club>Discord</a></li>
 	                </ul>
 	            </li>
 	          </ul>
