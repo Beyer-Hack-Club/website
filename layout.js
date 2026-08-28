@@ -73,8 +73,7 @@ function headerHTML() {
 	            <li>
 	                <strong>Socials (hover to show)</strong>
 	                <ul>
-	                  <li><a href="/coming-soon">Instagram</a></li>
-	                  <li><a href="/coming-soon">Facebook</a></li>
+	                  <li><a href="https://www.instagram.com/beyerhack.club/">Instagram</a></li>
                     <li><a href="https://discord.beyerhack.club">Discord</a></li>
 	                </ul>
 	            </li>
