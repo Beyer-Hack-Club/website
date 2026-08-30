@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadLayoutByPetraPixel();
   async function fetchLatestAnnouncement()
   {
-    fetch('https://api.beyerhack.club/website/announcement')
+    fetch('https://api.beyerhack.club/website/sidebar')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok ' + response.statusText);
@@ -12,29 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then(data => {
         document.getElementById("announcement").innerHTML = JSON.parse(JSON.stringify(data)).Announcement;
-      })
-      .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-      });
-  }
-  fetchLatestAnnouncement();
-    async function fetchLatestMeeting()
-  {
-    fetch('https://api.beyerhack.club/website/meeting')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-      })
-      .then(data => {
         document.getElementById("meeting").innerHTML = JSON.parse(JSON.stringify(data)).Meeting;
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
       });
   }
-  fetchLatestMeeting();
+  fetchLatestAnnouncement();
+  
 })
 
 
