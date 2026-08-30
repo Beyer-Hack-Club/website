@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Page has finished loading.
   loadLayoutByPetraPixel();
-  async function fetchLatestAnnouncement()
+  async function updateSidebar()
   {
     fetch('https://api.beyerhack.club/website/sidebar')
       .then(response => {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error('There was a problem with the fetch operation:', error);
       });
   }
-  fetchLatestAnnouncement();
+  updateSidebar();
   
 })
 
