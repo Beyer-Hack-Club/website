@@ -52,7 +52,7 @@ function headerHTML() {
 	        <nav>
 	          <ul>
 	            <li><a href="/">Home</a></li>
-	            <li><a href="/coming-soon">Meeting Logs</a></li>
+	            <li><a href="/meeting-logs">Meeting Logs</a></li>
 	            <li><a href="https://discord.beyerhack.club">Discord</a></li>
               <li><a href="https://donate.beyerhack.club">Donate</a></li>
 	            <li>

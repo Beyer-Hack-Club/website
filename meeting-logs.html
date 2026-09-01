@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <title>Beyer Hack Club</title>
+
+    <meta content="Website for Beyer's Hack Club!" name="description" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://s3.beyerhack.club/logos/raster/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- CSS: -->
+    <link href="./style.css" rel="stylesheet" />
+    
+    <!-- JavaScript: -->
+    <script src="./layout.js"></script>
+    </head>
+    <body>
+        <div class="layout">
+            <main id="content">
+                <h1 id="meeting-title">Meeting</h1>
+                <blockquote id="duration">Duration</blockquote> 
+                <h2>Objective</h2>
+                <p id="objective">Objective Here</p>
+                <h2>Activites</h2>
+                <p id="activities">Activites Here</p>
+                <h2>News Discussed</h2>
+                <p id ="new">News Here</p>
+                <h2>Old News Discussed</h2>
+                <p id="old">Old here</p>
+            </main>
+        </div>
+        <script>
+              async function loadMeeting()
+            {
+              fetch('https://api.beyerhack.club/logs/meeting/latest')
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                  }
+                  return response.json();
+                })
+                .then(data => {
+                replaceElement("meeting-title", "Meeting on "+ JSON.parse(JSON.stringify(data)).date)
+                replaceElement("duration", "Duration: "+ JSON.parse(JSON.stringify(data)).duration)
+                replaceElement("objective", JSON.parse(JSON.stringify(data)).objective)
+                replaceElement("activities", JSON.parse(JSON.stringify(data)).activities)
+                replaceElement("new", JSON.parse(JSON.stringify(data)).new)
+                replaceElement("old", JSON.parse(JSON.stringify(data)).old)
+                })
+                .catch(error => {
+                  console.error('There was a problem with the fetch operation:', error);
+                });
+            }
+            loadMeeting();
+            function replaceElement(id, content){
+                document.getElementById(id).innerHTML = content;
+            }
+            loadMeetingsLogs()
+        </script>
+
+
+
+    </body>
+</html>
