@@ -55,6 +55,7 @@ function headerHTML() {
 	            <li><a href="/meeting-logs">Meeting Logs</a></li>
 	            <li><a href="https://discord.beyerhack.club">Discord</a></li>
               <li><a href="https://donate.beyerhack.club">Donate</a></li>
+              <li><a href="https://forms.gle/h1dwamAuJJtS5rA76">Attendance</a></li>
 	            <li>
 	                <strong>Socials (hover to show)</strong>
 	                <ul>
