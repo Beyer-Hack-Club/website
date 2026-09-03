@@ -43,12 +43,12 @@
                   return response.json();
                 })
                 .then(data => {
-                replaceElement("meeting-title", "Meeting on "+ JSON.parse(JSON.stringify(data)).date)
-                replaceElement("duration", "Duration: "+ JSON.parse(JSON.stringify(data)).duration)
-                replaceElement("objective", JSON.parse(JSON.stringify(data)).objective)
-                replaceElement("activities", JSON.parse(JSON.stringify(data)).activities)
-                replaceElement("new", JSON.parse(JSON.stringify(data)).new)
-                replaceElement("old", JSON.parse(JSON.stringify(data)).old)
+                replaceElement("meeting-title", "Meeting on "+ urlify(JSON.parse(JSON.stringify(data)).date))
+                replaceElement("duration", "Duration: "+ urlify(JSON.parse(JSON.stringify(data)).duration))
+                replaceElement("objective", urlify(JSON.parse(JSON.stringify(data)).objective))
+                replaceElement("activities", urlify(JSON.parse(JSON.stringify(data)).activities))
+                replaceElement("new", urlify(JSON.parse(JSON.stringify(data)).new))
+                replaceElement("old", urlify(JSON.parse(JSON.stringify(data)).old))
                 })
                 .catch(error => {
                   console.error('There was a problem with the fetch operation:', error);
@@ -59,6 +59,12 @@
                 document.getElementById(id).innerHTML = content;
             }
             loadMeetingsLogs()
+            function urlify(text) {
+              var urlRegex = /(https?:\/\/[^\s]+)/g;
+              return text.replace(urlRegex, function(url) {
+                return '<a href="' + url + '">' + url + '</a>';
+              })
+            }
         </script>
 
 
