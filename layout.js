@@ -62,7 +62,7 @@ function headerHTML() {
 	                </ul>
 	            </li>
 	            <li>
-	                <strong>Member Links</strong>
+	                <strong>Member Links (hover to show)</strong>
 	                <ul>
 	                  <li><a href="https://discord.beyerhack.club">Discord</a></li>
                     <li><a href="https://forms.gle/h1dwamAuJJtS5rA76">Attendance</a></li>
