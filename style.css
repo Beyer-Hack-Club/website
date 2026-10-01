@@ -341,6 +341,11 @@ main {
   line-height: 1.5;
 }
 
+pre{
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
 main a,
 main a:visited {
   color: var(--link-color);
@@ -582,4 +587,5 @@ main h6 {
   #skip-to-content-link {
     font-size: 1rem;
   }
+
 }
